@@ -1,6 +1,8 @@
 org.dcu.admin
 org.dcu.customer
 org.dcu.database
+org.dcu.home
 org.dcu.models
 org.dcu.pro
+org.dcu.report
 org.dcu.utils
