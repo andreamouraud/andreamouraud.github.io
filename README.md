@@ -27,16 +27,22 @@ The project was developed using :
 ***
 The system is structured in such a way :
 	
-| Route                                                              | Description                  | Login Required | Account Creation |
-|--------------------------------------------------------------------|------------------------------|:--------------:|:----------------:|
-| [/](http://ssd.eeng.dcu.ie:8091/mouraua2/)                         | Anonymous ordering page      | No             | -                |
-| [/professional](http://ssd.eeng.dcu.ie:8091/mouraua2/professional) | Restaurant managing page     | Yes            | Yes              |
-| [/admin](http://ssd.eeng.dcu.ie:8091/mouraua2/admin)               | Database administration page | Yes            | No               |
-| [/report](http://ssd.eeng.dcu.ie:8091/mouraua2/report)             | Report page                  | No             | -                |
+| Route                                                                                      | Description                  | Login Required | Account Creation |
+|--------------------------------------------------------------------------------------------|------------------------------|:--------------:|:----------------:|
+| [/](http://ssd.eeng.dcu.ie:8091/mouraua2/)                                                 | Home page                    | No             | -                |
+| [/application](http://ssd.eeng.dcu.ie:8091/mouraua2/application)                           | Anonymous ordering page      | No             | -                |
+| [/application/professional](http://ssd.eeng.dcu.ie:8091/mouraua2/application/professional) | Restaurant managing page     | Yes            | Yes              |
+| [/application/admin](http://ssd.eeng.dcu.ie:8091/mouraua2/application/admin)               | Database administration page | Yes            | No               |
+| [/report](http://ssd.eeng.dcu.ie:8091/mouraua2/report)                                     | Report page                  | No             | -                |
+
+### Javadoc
+***
+A complete Javadoc documentation for the project is available [here](https://andreamouraud.github.io/)
+
 
 ### Admin 
 ***
-The [administration system](http://ssd.eeng.dcu.ie:8091/mouraua2/admin) is used to manage the application:
+The [administration system](http://ssd.eeng.dcu.ie:8091/mouraua2/application/admin) is used to manage the application:
 - Reset the database
 - Populate the database
 
@@ -52,7 +58,7 @@ The application is separated in two parts
 
 #### Anonymous ordering
 
-The [anonymous ordering page](http://ssd.eeng.dcu.ie:8091/mouraua2/) is where the user will be able to order his food.
+The [anonymous ordering page](http://ssd.eeng.dcu.ie:8091/application/mouraua2/) is where the user will be able to order his food.
 The ordering path is quite simple :
 * A list of available restaurants that the user can select is presented, if none exists, a message notifies him.
 * A list of available menus that the user can select (from the chosen restaurant) is presented, if none exists, a message notifies him.
@@ -61,13 +67,13 @@ The ordering path is quite simple :
 
 #### Restaurant managing 
 
-Sample login details (generated from the [administration page](http://ssd.eeng.dcu.ie:8091/mouraua2/admin) populate):
+Sample login details (generated from the [administration page](http://ssd.eeng.dcu.ie:8091/mouraua2/application/admin) populate):
 
 | Email        | Password  |
 |--------------|-----------|
 | user@dcu.ie  | password  |
 
-The [restaurant managing page](http://ssd.eeng.dcu.ie:8091/mouraua2/professional) is where any restaurateur can register and manage his restaurants for customers to order.
+The [restaurant managing page](http://ssd.eeng.dcu.ie:8091/mouraua2/application/professional) is where any restaurateur can register and manage his restaurants for customers to order.
 This is what he can do:
 * Create and modify restaurants.
 * Create and modify menus.
@@ -141,11 +147,11 @@ CREATE TABLE mouraua2_orders (
 ### Special effort and functionality 
 ***
 * Design
-* Administration page : Automated database reset and populate
+* [Administration page](http://ssd.eeng.dcu.ie:8091/mouraua2/application/admin) : Automated database reset and populate
 * SHA256 Password hashing with SecureRandom generated salt
 * Field validation (Regex)
 * MVC Architecture
 * Session tracking and logout
-* Complete Javadoc documentation
+* [Complete Javadoc documentation](https://andreamouraud.github.io/)
 * MarkDown report (Turned to HTML scraping Github, *allowed by teacher*)
 * Field modification 
